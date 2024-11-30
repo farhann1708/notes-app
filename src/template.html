@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Notes</title>
+  </head>
+  <body>
+    <custom-header class="header-nav">App Notes</custom-header>
+    <main class="container mt-4">
+      <div class="card">
+        <div class="card-body">
+          <form id="searchForm" class="input-group">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search notes..."
+            />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2>List Note</h2>
+          <div id="listNote" class="row"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2>List Archive</h2>
+          <div id="listArchive" class="row"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2>Add New Note</h2>
+          <form id="addNoteForm">
+            <div class="form-group mb-2">
+              <label for="inputTitle">Title</label>
+              <input type="text" class="form-control" id="inputTitle" required />
+              <div class="invalid-feedback">Please enter a title.</div>
+            </div>
+            <div class="form-group">
+              <label for="inputBody">Body</label>
+              <textarea class="form-control mb-2" id="inputBody" rows="3" required></textarea>
+              <div class="invalid-feedback">Please enter a body.</div>
+            </div>
+            <button type="submit" id="addNoteBtn" class="btn btn-primary">Add Note</button>
+          </form>
+        </div>
+      </div>
+      <div id="loadingIndicator" class="loading-indicator d-none">Loading...</div>
+    </main>
+    <custom-footer class="footer-bar"></custom-footer>
+  </body>
+  </body>
+</html>
